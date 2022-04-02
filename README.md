@@ -1,24 +1,9 @@
-# README
+# Twitter Clone
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
 
-Things you may want to cover:
+Project for The Odin Project (https://www.theodinproject.com/) as part of the Forms and Authentication section of the Ruby on Rails course.
 
-* Ruby version
+Through this project we were tasked with building a "clubhouse" web app, where members were able to write anonymous posts. Inside of the "clubhouse", members are able to see who the author of the post is but outside, they can only see the posts and not the authors.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The project helped to cement a number of lessons and readings on authentication within rails and gain a healthy amount of experience using the Devise ruby gem to quickly and securely integrate user authentication into the web app.
