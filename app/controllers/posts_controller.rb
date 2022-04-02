@@ -9,5 +9,12 @@ class PostsController < ApplicationController
   end
 
   def create
+    @post = current_user.post.build(title: params[:title], body: params[:body])
+
+    if @post.save
+      redirect_to posts_url
+    else
+      render :new
+    end
   end
 end
