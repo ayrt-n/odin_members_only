@@ -1,4 +1,4 @@
-<div class="devise">
+<div class="form-container">
   <h2>Log in</h2>
   
   <%= form_for(resource, as: resource_name, data: { turbo: false}, url: session_path(resource_name)) do |f| %>
@@ -20,7 +20,7 @@
     <% end %>
   
     <div class="actions">
-      <%= f.submit "Log in" %>
+      <%= f.submit "Log in", class: "button" %>
     </div>
   <% end %>
   
