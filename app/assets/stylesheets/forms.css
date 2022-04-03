@@ -1,0 +1,80 @@
+.form-container {
+  border-radius: 3px;
+  border: 1px solid #737373;
+  background-color: #525252;
+  width: 450px;
+  padding: 1rem;
+}
+
+div.field {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+div.field * {
+  width: 100%;
+}
+
+.form-container input,
+.form-container textarea {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.form-container .button {
+  border-radius: 3px;
+  border: none;
+  background-color: #0076de;
+  padding: 0.35rem;
+  color: #fafafa;
+}
+
+.form-container .button:hover {
+  background-color: #0d87f9;
+}
+
+.form-container .button:active {
+  background-color: #006ac7;
+}
+
+.form-container a {
+  display: inline-block;
+  margin-left: 0.35rem;
+  text-decoration: none;
+  color: #fafafa;
+  font-size: 0.75rem;
+}
+
+.form-container a:first-of-type {
+  margin-top: 1rem;
+}
+
+.form-container input[type="checkbox"] {
+  width: auto;
+}
+
+.form-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+div#error_explanation {
+  margin-bottom: 3rem;
+}
+
+div#error_explanation li {
+  margin-left: 1rem;
+}
+
+div.field_with_errors input {
+  border: 1.5px solid red;
+  border-radius: 3px;
+}
+
+div.cancel {
+  margin-top: 1rem;
+}
+
+div.cancel h3 {
+  margin-bottom: 0.5rem;
+}
