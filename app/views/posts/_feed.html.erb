@@ -1,0 +1,15 @@
+<div class="feed">
+  <div class="posts-container">
+    <% @posts.each do |post| %>
+      <div class="post-container">
+        <h3><%= post.title %></h3>
+        <p><%= post.body %></p>
+        <% if user_signed_in? %>
+          <p>-<%= post.user.name %></p>
+        <% else %>
+          <p>-Anonymous</p>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
