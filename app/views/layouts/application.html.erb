@@ -18,16 +18,26 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
     
     <div class="grid-container">
-      <div class="nav brand">
-        <%= link_to "Members Only!", "#" %>
+      <div class="nav post-controls">
+        <% if user_signed_in? %>
+          <%= link_to "New Post", new_post_path, class: "button new-post" %>
+        <% end %>
       </div>
-      <div class="nav controls">
-        <%= link_to "Sign up", "#" %>
-        <%= link_to "Sign in", "#" %>
+      <div class="nav brand">
+        <%= link_to "Members Only!", root_path %>
+      </div>
+      <div class="nav session-controls">
+        <% if user_signed_in? %>
+          <%= link_to current_user.name, edit_user_registration_path %>
+          <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to "Sign up", new_user_registration_path %>
+          <%= link_to "Sign in", new_user_session_path %>
+        <% end %>
       </div>
       <div class="main-container">
         <%= yield %>
