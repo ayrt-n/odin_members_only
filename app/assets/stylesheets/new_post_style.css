@@ -1,0 +1,7 @@
+div.new-post {
+  border-radius: 3px;
+  border: 1px solid #737373;
+  background-color: #525252;
+  width: 450px;
+  padding: 1rem; 
+}
