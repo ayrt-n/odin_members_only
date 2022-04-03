@@ -1,11 +1,9 @@
-<div class="feed">
-  <div class="posts-container">
-    <% @posts.each do |post| %>
-      <div class="post-container">
-        <h3><%= post.title %></h3>
-        <p><%= post.body %></p>
-        <p>-<%= post.user.name %></p>
-      </div>
-    <% end %>
-  </div>
+<div class="index">
+  <% unless user_signed_in? %>
+    <div class="info">
+      <p>To make your own posts or see who is posting about what</p>
+      <p>Sign in or make an account</p>
+    </div>
+  <% end %>
+  <%= render 'feed' %>
 </div>
