@@ -1,11 +1,27 @@
-<h2>New post!</h2>
+<% if @post.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+    <ul>
+    <% @post.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
 
 <div class="form-container">
+  <h2>New post!</h2>
+
   <%= form_with model: @post do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %><br>
-    <%= f.label :body %>
-    <%= f.text_field :body %><br>
-    <%= f.submit "Post" %>
+    <div class="field">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+    <div class="field">
+      <%= f.label :body %>
+      <%= f.text_area :body, rows: 20 %>
+    </div>
+    <%= f.submit "Post", class: "button" %>
   <% end %>
 </div>
