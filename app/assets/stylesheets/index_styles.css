@@ -1,0 +1,12 @@
+div.feed {
+  margin-top: 3rem;
+}
+
+div.post-container {
+  width: 50vw;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #737373;
+  background-color: #525252;
+}
